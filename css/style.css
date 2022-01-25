@@ -496,7 +496,7 @@ body.dark .skills__img {
     background: var(--clr-dark);
 }
 
-@media (max-width: 600px){
+@media (max-width: 1000px){
     .skills{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
