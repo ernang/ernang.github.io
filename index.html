@@ -1,440 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eur1p3des Portfolio Website</title>
-    <link href="img/eur1p3des_logo.png" rel="icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eur1p3des Portfolio Website</title>
+        <link href="/assets/img/eur1p3des_logo.png" rel="icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 
-    <!-- Update these with your own fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="#home"
-          ><img src="img/transparent.png" alt="" class="logo__img"
-        /></a>
-      </div>
-      <button class="theme__switch" id="switch">
-        <span><i class="fas fa-sun sol"></i></span>
-        <span><i class="fas fa-moon"></i></span>
-      </button>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item">
-            <a href="#services" class="nav__link">What I Do</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About me</a>
-          </li>
-          <li class="nav__item">
-            <a href="#skills" class="nav__link">My Skills</a>
-          </li>
-          <li class="nav__item">
-            <a href="#work" class="nav__link">My Projects</a>
-          </li>
-          <li class="nav__item">
-            <a href="notes/notes.html" class="nav__link">Notes</a>
-          </li>
-          <li class="nav__item">
-            <a href="#footer" class="nav__link">Contact me</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <link rel="stylesheet" href="/assets/css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#home"><img src="/assets/img/transparent.png" alt="" class="logo__img" /></a>
+            </div>
+            <button class="theme__switch" id="switch">
+                <span><i class="fas fa-sun sol"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+            </button>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">What I Do</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">My Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link" id="worked1312">My Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/notes/notes.html" class="nav__link">Notes</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#footer" class="nav__link">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Introduction -->
-    <section class="intro" id="home">
-      <h1 class="section__title section__title--intro">
-        Hi, I am <strong>Eur1p3des</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">
-        Cyber Security Enthusiast
-      </p>
-      <img
-        src="img/eur1p3des_logo.png"
-        alt="Eur1p3des Logo"
-        class="intro__img"
-      />
-    </section>
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">Hi, I am <strong>Eur1p3des</strong></h1>
+            <p class="section__subtitle section__subtitle--intro">
+                Cyber Security Enthusiast
+            </p>
+            <img src="/assets/img/eur1p3des_logo.png" alt="Eur1p3des Logo" class="intro__img" />
+        </section>
 
-    <!-- My services -->
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">What I do</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Studies</h3>
-          <p>
-            As of today, <span id="spanDate"></span>, I am a first year student
-            at UPC( Universitat Politècnica de Catalunya) cursing the IT
-            Engineering degree.
-          </p>
-          <p>
-            I have previously also graduated from the CFGS called "ASIR", which
-            refers to 'Administration of networked computer systems' and
-            specillized in cybersecurity.
-          </p>
-        </div>
-        <!-- / service -->
+        <!-- My services -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Studies</h3>
+                    <p>As of today, <span id="spanDate"></span>, I am a first year student at UPC( Universitat Politècnica de Catalunya) cursing the IT Engineering degree.</p>
+                    <p>
+                        I have previously also graduated from the CFGS called "ASIR", which refers to 'Administration of networked computer systems' and specillized in cybersecurity.
+                    </p>
+                </div>
+                <!-- / service -->
 
-        <div class="service">
-          <h3>OS Administration</h3>
-          <p>
-            As part of my CFGS, I had to learn how to properly administrate an
-            operative system, such as Linux or Windows.
-          </p>
-          <p>
-            I have learnt to acquire, install, or upgrade computer components
-            and software, provide routine automation, maintain security policies
-            and troubleshoot.
-          </p>
-        </div>
-        <!-- / service -->
+                <div class="service">
+                    <h3>OS Administration</h3>
+                    <p>
+                        As part of my CFGS, I had to learn how to properly administrate an operative system, such as Linux or Windows.
+                    </p>
+                    <p>
+                        I have learnt to acquire, install, or upgrade computer components and software, provide routine automation, maintain security policies and troubleshoot.
+                    </p>
+                </div>
+                <!-- / service -->
 
-        <div class="service">
-          <h3>Server Administration</h3>
-          <p>
-            As part of my CFGS,I have learnt to configure and maintain servers
-            and make sure IT infrastructure runs smoothly in the following ways:
-          </p>
-          <p>
-            Create new user accounts, recover lost passwords and keeps data
-            secure, develop and implements network maintenance standard
-            operating procedures, diagnose and repairs hardware and network
-            malfunctions, ensure security firewalls are updated regularly,
-            provide management with regular reports.
-          </p>
-        </div>
-        <!-- / service -->
-      </div>
-      <!-- / services -->
+                <div class="service">
+                    <h3>Server Administration</h3>
+                    <p>
+                        As part of my CFGS,I have learnt to configure and maintain servers and make sure IT infrastructure runs smoothly in the following ways:
+                    </p>
+                    <p>
+                        Create new user accounts, recover lost passwords and keeps data secure, develop and implements network maintenance standard operating procedures, diagnose and repairs hardware and network malfunctions, ensure
+                        security firewalls are updated regularly, provide management with regular reports.
+                    </p>
+                </div>
+                <!-- / service -->
+            </div>
+            <!-- / services -->
 
-      <a href="#work" class="btn buton">My Projects</a>
-    </section>
+            <a href="#work" class="btn buton">My Projects</a>
+        </section>
 
+        <!-- About me -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">About me</h2>
+            <p class="section__subtitle section__subtitle--about">
+                Cybersecurity enthusiast based in Barcelona
+            </p>
 
-    
-    <!-- About me -->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">About me</h2>
-      <p class="section__subtitle section__subtitle--about">
-        Cybersecurity enthusiast based in Barcelona
-      </p>
+            <div class="about-me__body">
+                <p>
+                    Welcome to my blog, my name is Eur1p3des, although it isn't the real one. My main goal is to become a cybersecurity expert.
+                </p>
+                <p>
+                    In order to fulfill my goal, I have enrolled on different courses: HNC in Networking, several types of cybersecurity courses (Cyber Strategy, HackLog, Dawn of the Code War, etc.)
+                </p>
+            </div>
 
-      <div class="about-me__body">
-        <p>
-          Welcome to my blog, my name is Eur1p3des, although it isn't the real
-          one. My main goal is to become a cybersecurity expert.
-        </p>
-        <p>
-          In order to fulfill my goal, I have enrolled on different courses: HNC
-          in Networking, several types of cybersecurity courses (Cyber Strategy,
-          HackLog, Dawn of the Code War, etc.)
-        </p>
-      </div>
+            <img src="/assets/img/eur1p3des_logo.png" alt="Jane leaning against a bus" class="about-me__img" />
+        </section>
 
-      <img
-        src="img/eur1p3des_logo.png"
-        alt="Jane leaning against a bus"
-        class="about-me__img"
-      />
-    </section>
+        <hr class="divisory__line" />
 
-    <hr class="divisory__line" />
+        <!-- ======= Skills Section ======= -->
+        <section class="my-skills" id="skills">
+            <h2 class="section__title section__title--skills">My Skills</h2>
+            <p class="section__subtitle section__subtitle--skills">
+                A selection of my range of skills
+            </p>
 
+            <div class="skills">
+                <!-- Skills item 01 -->
+                <a href="https://www.gnu.org/software/bash/" class="skills__item">
+                    <img src="/assets/img/logos/bash.png" alt="" class="skills__img" />
+                </a>
 
-    <!-- ======= Skills Section ======= -->
-    <section class="my-skills" id="skills">
-      <h2 class="section__title section__title--skills">My Skills</h2>
-      <p class="section__subtitle section__subtitle--skills">
-        A selection of my range of skills
-      </p>
+                <!-- Skills item 02 -->
+                <a href="http://www.cplusplus.org/" class="skills__item">
+                    <img src="/assets/img/logos/C++.png" alt="" class="skills__img" />
+                </a>
 
-      <div class="skills">
-        <!-- Skills item 01 -->
-        <a href="https://www.gnu.org/software/bash/" class="skills__item">
-          <img src="img/logos/bash.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 03 -->
+                <a href="https://www.docker.com/" class="skills__item">
+                    <img src="/assets/img/logos/docker.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 02 -->
-        <a href="http://www.cplusplus.org/" class="skills__item">
-          <img src="img/logos/C++.svg" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 04 -->
+                <a href="https://html.com/" class="skills__item">
+                    <img src="/assets/img/logos/html.jpg" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 03 -->
-        <a
-          href="https://www.docker.com/"
-          class="skills__item"
-        >
-          <img src="img/logos/docker.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 05 -->
+                <a href="https://java.com/en/" class="skills__item">
+                    <img src="/assets/img/logos/java_1.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 04 -->
-        <a href="https://html.com/" class="skills__item">
-          <img src="img/logos/html.jpg" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 06 -->
+                <a href="https://www.linux.org/" class="skills__item">
+                    <img src="/assets/img/logos/linux.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 05 -->
-        <a href="https://java.com/en/" class="skills__item">
-          <img src="img/logos/java_1.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 07 -->
+                <a href="https://www.cisco.com/c/en/us/products/security/what-is-pen-testing.html" class="skills__item">
+                    <img src="/assets/img/logos/pentesting.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 06 -->
-        <a href="https://www.linux.org/" class="skills__item">
-          <img src="img/logos/linux.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 08 -->
+                <a href="https://www.php.net/" class="skills__item">
+                    <img src="/assets/img/logos/php.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 07 -->
-        <a
-          href="https://www.cisco.com/c/en/us/products/security/what-is-pen-testing.html"
-          class="skills__item"
-        >
-          <img src="img/logos/pentesting.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 09 -->
+                <a href="https://www.python.org/" class="skills__item">
+                    <img src="/assets/img/logos/python.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 08 -->
-        <a
-          href="https://www.php.net/"
-          class="skills__item"
-        >
-          <img src="img/logos/php.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 10 -->
+                <a href="https://www.raspberrypi.org/" class="skills__item">
+                    <img src="/assets/img/logos/raspberry.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 09 -->
-        <a
-          href="https://www.python.org/"
-          class="skills__item"
-        >
-          <img src="img/logos/python.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 11 -->
+                <a href="https://en.wikipedia.org/wiki/Server_(computing)" class="skills__item">
+                    <img src="/assets/img/logos/server.png" alt="" class="skills__img" />
+                </a>
 
-        <!-- Skills item 10 -->
-        <a
-          href="https://www.raspberrypi.org/"
-          class="skills__item"
-        >
-          <img src="img/logos/raspberry.png" alt="" class="skills__img" />
-        </a>
+                <!-- Skills item 12 -->
+                <a href="https://www.mysql.com/" class="skills__item">
+                    <img src="/assets/img/logos/sql.png" alt="" class="skills__img" />
+                </a>
+            </div>
+        </section>
+        <hr class="divisory__line" />
+        <!-- End Skilss -->
 
-        <!-- Skills item 11 -->
-        <a
-          href="https://en.wikipedia.org/wiki/Server_(computing)"
-          class="skills__item"
-        >
-          <img src="img/logos/server.png" alt="" class="skills__img" />
-        </a>
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My Projects</h2>
+            <p class="section__subtitle section__subtitle--work">
+                A selection of my range of projects
+            </p>
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="https://github.com/eur1p3des/THC.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-01.jpg" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Skills item 12 -->
-        <a
-          href="https://www.mysql.com/"
-          class="skills__item"
-        >
-          <img src="img/logos/sql.png" alt="" class="skills__img" />
-        </a>
-      </div>
-    </section>
-    <hr class="divisory__line" />
-    <!-- End Skilss -->
+                <!-- Portfolio item 02 -->
+                <a href="https://github.com/eur1p3des/serv_web" class="portfolio__item">
+                    <img src="/assets/img/portfolio-02.png" alt="" class="portfolio__img" />
+                </a>
 
-    <!-- My Work -->
-    <section class="my-work" id="work">
-      <h2 class="section__title section__title--work">My Projects</h2>
-      <p class="section__subtitle section__subtitle--work">
-        A selection of my range of projects
-      </p>
+                <!-- Portfolio item 03 -->
+                <a href="https://github.com/eur1p3des/Fonaments_Programacio" class="portfolio__item">
+                    <img src="/assets/img/portfolio-03.png" alt="" class="portfolio__img" />
+                </a>
 
-      <div class="portfolio">
-        <!-- Portfolio item 01 -->
-        <a href="https://github.com/eur1p3des/THC.git" class="portfolio__item">
-          <img src="img/portfolio-01.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 04 -->
+                <a href="https://github.com/eur1p3des/MAINS" class="portfolio__item">
+                    <img src="/assets/img/portfolio-04.jpg" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 02 -->
-        <a href="https://github.com/eur1p3des/serv_web" class="portfolio__item">
-          <img src="img/portfolio-02.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 05 -->
+                <a href="https://github.com/eur1p3des/Serv_Mail" class="portfolio__item">
+                    <img src="/assets/img/portfolio-05.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 03 -->
-        <a
-          href="https://github.com/eur1p3des/Fonaments_Programacio"
-          class="portfolio__item"
-        >
-          <img src="img/portfolio-03.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 06 -->
+                <a href="https://github.com/eur1p3des/WPwn.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-06.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 04 -->
-        <a href="https://github.com/eur1p3des/MAINS" class="portfolio__item">
-          <img src="img/portfolio-04.jpg" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 07 -->
+                <a href="https://github.com/eur1p3des/sudoku_cpp.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-07.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 05 -->
-        <a
-          href="https://github.com/eur1p3des/Serv_Mail"
-          class="portfolio__item"
-        >
-          <img src="img/portfolio-05.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 08 -->
+                <a href="https://github.com/eur1p3des/Calcular_el_dia_de_la_setmana_donada_una_data.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-08.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 06 -->
-        <a href="https://github.com/eur1p3des/WPwn.git" class="portfolio__item">
-          <img src="img/portfolio-06.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 09 -->
+                <a href="/assets/projects/Clock/clock.html" class="portfolio__item">
+                    <img src="/assets/img/portfolio-09.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 07 -->
-        <a
-          href="https://github.com/eur1p3des/sudoku_cpp.git"
-          class="portfolio__item"
-        >
-          <img src="img/portfolio-07.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 10 -->
+                <a href="https://github.com/eur1p3des/Laberint_Creator_Solver.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-10.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 08 -->
-        <a
-          href="https://github.com/eur1p3des/Calcular_el_dia_de_la_setmana_donada_una_data.git"
-          class="portfolio__item"
-        >
-          <img src="img/portfolio-08.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Portfolio item 11 -->
+                <a href="https://github.com/eur1p3des/youtubeDownloader.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-11.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 09 -->
-        <a href="/projects/Clock/clock.html" class="portfolio__item">
-          <img src="img/portfolio-09.png" alt="" class="portfolio__img">
-        </a>
+                <!-- Portfolio item 12 -->
+                <a href="https://github.com/eur1p3des/InstaBot.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-12.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 10 -->
-        <a href="https://github.com/eur1p3des/Laberint_Creator_Solver.git" class="portfolio__item">
-          <img src="img/portfolio-10.png" alt="" class="portfolio__img">
-        </a>
+                <!-- Portfolio item 13 -->
+                <a href="https://github.com/eur1p3des/pdfExtractor.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-13.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!-- Portfolio item 11 -->
-        <a href="https://github.com/eur1p3des/youtubeDownloader.git" class="portfolio__item">
-          <img src="img/portfolio-11.png" alt="" class="portfolio__img">
-        </a>
+                <!-- Portfolio item 14 -->
+                <a href="https://github.com/eur1p3des/django-ToDo-by-Eur1p3des.git" class="portfolio__item">
+                    <img src="/assets/img/portfolio-14.png" alt="" class="portfolio__img" />
+                </a>
+            </div>
+        </section>
 
-        <!-- Portfolio item 12 -->
-        <a href="https://github.com/eur1p3des/InstaBot.git" class="portfolio__item">
-          <img src="img/portfolio-12.png" alt="" class="portfolio__img">
-        </a>
-         
-        <!-- Portfolio item 13 -->
-        <a href="https://github.com/eur1p3des/pdfExtractor.git" class="portfolio__item">
-          <img src="img/portfolio-13.png" alt="" class="portfolio__img">
-        </a>
+        <!--<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>-->
+        <button onclick="scrollToTop()" class="scroll-btn" id="scroll-btn" title="Go to top">
+            <i class="fas fa-chevron-circle-up"></i>
+        </button>
 
-        <!-- Portfolio item 14 -->
-        <a href="https://github.com/eur1p3des/django-ToDo-by-Eur1p3des.git" class="portfolio__item">
-          <img src="img/portfolio-14.png" alt="" class="portfolio__img">
-        </a>
-        
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <!-- replace with your own email address -->
+            <img src="/assets/img/eur1p3des_logo.png" class="footer__img" alt="eur1p3des logo" />
+            <h2 class="section__title section__title--footer">Contact me</h2>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="mailto:eur1p3des@protonmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://t.me/Eur1p3des">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://discordapp.com/users/893803679835103282">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/eur1p3des">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <hr class="footer_divisory" />
+            <div class="copyright">
+                &copy; Copyright <strong><span>Eur1p3des</span></strong>. All right Reserved
+            </div>
+        </footer>
 
-      </div>
-    </section>
+        <!-- Scripts -->
+        <script src="/assets/js/index.js"></script>
 
-    <!--<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>-->
-    <button
-      onclick="scrollToTop()"
-      class="scroll-btn"
-      id="scroll-btn"
-      title="Go to top"
-    >
-      <i class="fas fa-chevron-circle-up"></i>
-    </button>
+        <!-- Date script -->
+        <script>
+            // When the user scrolls down 20px from the top of the document,we will show the button
+            window.onscroll = function () {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    document.getElementById("scroll-btn").style.display = "block";
+                } else {
+                    document.getElementById("scroll-btn").style.display = "none";
+                }
+            };
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-      <!-- replace with your own email address -->
-      <img
-        src="img/eur1p3des_logo.png"
-        class="footer__img"
-        alt="eur1p3des logo"
-      />
-      <h2 class="section__title section__title--footer">Contact me</h2>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="mailto:eur1p3des@protonmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="http://t.me/Eur1p3des">
-            <i class="fab fa-telegram-plane"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a
-            class="social-list__link"
-            href="https://discordapp.com/users/893803679835103282"
-          >
-            <i class="fab fa-discord"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://github.com/eur1p3des">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-      </ul>
-      <hr class="footer_divisory" />
-      <div class="copyright">
-        &copy; Copyright <strong><span>Eur1p3des</span></strong
-        >. All right Reserved
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/index.js"></script>
-
-    <!-- Date script -->
-    <script>
-      // When the user scrolls down 20px from the top of the document,we will show the button
-      window.onscroll = function()
-      {
-          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
-          {
-              document.getElementById("scroll-btn").style.display = "block";
-          }
-          else
-          {
-              document.getElementById("scroll-btn").style.display = "none";
-          }
-      };
-
-      function scrollToTop()
-      {
-          document.body.scrollTop = 0; // For Safari
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox and Opera
-      }
-    </script>
-    <script type="text/javascript">
-      var months = ['January','February','March','April','May','June','July',
-      'August','September','October','November','December'];
-      var today = new Date();
-      today.setTime(today.getTime() + (1000*3600*24));
-      document.getElementById("spanDate").innerHTML = months[today.getMonth()] + " " + (today.getDate()-1)+ ", " + today.getFullYear();
-    </script>
-  </body>
+            function scrollToTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox and Opera
+            }
+        </script>
+        <script type="text/javascript">
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var today = new Date();
+            today.setTime(today.getTime() + 1000 * 3600 * 24);
+            document.getElementById("spanDate").innerHTML = months[today.getMonth()] + " " + (today.getDate() - 1) + ", " + today.getFullYear();
+        </script>
+    </body>
 </html>
