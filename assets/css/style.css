@@ -628,6 +628,7 @@ body.dark .portfolio__img {
 /* Back to top */
 .scroll-btn {
     position: fixed;
+    display: none;
     right: 10px;
     bottom: 10px;
     margin: 0;
