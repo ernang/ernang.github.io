@@ -1,4 +1,4 @@
-<h3 align="center"><img src='https://github.com/eur1p3des/eur1p3des.github.io/blob/main/img/eur1p3des_logo.png' width='30%'></h3>
+<h3 align="center"><img src='https://github.com/eur1p3des/eur1p3des.github.io/blob/main/assets/img/eur1p3des_logo.png' width='30%'></h3>
 <h1 align="center">Eur1p3des Personal Portfolio</h1>
 <p align="center">This is my personal portfolio</p>
 <br/>
