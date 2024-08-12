@@ -1,0 +1,89 @@
+---
+import Icon from "./Icon.astro";
+import GearButton from "./GearButton.astro";
+
+const navItems = [
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:nestanguera@gmail.com",
+  },
+];
+---
+
+<header
+  class="fixed top-0 z-50 bg-[#212121] left-0 right-0 mx-auto flex items-center justify-between whitespace-nowrap border-b border-solid px-4 md:px-10 py-3 max-w-screen-lg"
+>
+  <div class="flex items-center gap-4">
+    <Icon />
+    <h2 class="text-lg font-bold leading-tight tracking-tight">
+      Ernest Anguera
+    </h2>
+  </div>
+
+  <!-- Mobile menu toggle button (hamburger icon) -->
+  <button id="menu-toggle" class="block lg:hidden focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <nav
+    id="menu"
+    class="hidden lg:flex flex-col lg:flex-row items-start lg:items-center absolute lg:static top-full left-0 w-full lg:w-auto bg-[#212121] lg:bg-transparent border-t border-gray-300 lg:border-0"
+  >
+    <ul class="flex flex-col lg:flex-row w-full">
+      {
+        navItems.map((link) => (
+          <li class="w-full">
+            <a
+              class="block px-4 py-2 text-sm font-medium leading-normal hover:bg-gray-700 hover:rounded-md"
+              aria-label={link.label}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  /* Optional: Smooth transition for the menu */
+  #menu {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  });
+</script>

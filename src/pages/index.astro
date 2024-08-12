@@ -1,0 +1,26 @@
+---
+import Projects from "@/components/Projects.astro";
+import Layout from "../layouts/Layout.astro";
+import Experiencia from "@/components/Experiencia.astro";
+import SobreMi from "@/components/SobreMi.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+---
+
+<Layout title="Portfolio de Ernest Anguera">
+  <main class="py-20 px-10 max-w-screen-lg left-0 right-0 mx-auto">
+    <SectionContainer>
+      <Hero />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl leading-tight font-bold">Proyectos</h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <Experiencia />
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <SobreMi />
+    </SectionContainer>
+  </main>
+</Layout>

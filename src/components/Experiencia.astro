@@ -1,0 +1,56 @@
+---
+import ExperienceButton from "./ExperienceButton.astro";
+
+const experienceList = [
+  {
+    title: "Auxiliar Caja - Contrato Temporal de verano",
+    dates: "Julio 2024 - Agosto 2024",
+    link: "https://www.linkedin.com/in/ernestanguera/",
+    image: "/experience/carrefour.webp",
+  },
+  {
+    title: "Técnico de Redes y Equipos Informáticos - Contrato en prácticas",
+    dates: "Febrero 2021 - Mayo 2021",
+    link: "https://www.linkedin.com/in/ernestanguera/",
+    image: "/experience/kereis.webp",
+  },
+  {
+    title: "Gestor de Siniestros - Contrato Temporal de verano",
+    dates: "Julio 2019 - Agosto 2019",
+    link: "https://www.linkedin.com/in/ernestanguera/",
+    image: "/experience/grupogalilea_logo.jpg",
+  },
+];
+---
+
+<h2
+  class="left-0 right-0 mx-auto items-center justify-between max-w-screen-lg text-2xl leading-tight font-bold pb-2"
+>
+  Experiencia
+</h2>
+<div
+  class="left-0 right-0 mx-auto px-4 sm:px-6 lg:px-8 items-center justify-between max-w-screen-lg"
+>
+  {
+    experienceList.map((experience) => (
+      <div class="flex flex-col sm:flex-row justify-between items-center pb-4">
+        <div class="flex gap-4 sm:gap-6 items-center">
+          <img
+            src={experience.image}
+            alt={experience.title}
+            class="w-24 h-16 sm:w-30 sm:h-20 rounded-md bg-white"
+          />
+          <div class="flex flex-col justify-center text-left">
+            <p class="font-semibold text-lg sm:text-xl leading-tight tracking-tighter pb-1 sm:pb-2">
+              {experience.title}
+            </p>
+            <p class="font-thin text-sm sm:text-md">{experience.dates}</p>
+          </div>
+        </div>
+        <div class="mt-4 sm:mt-0">
+          <ExperienceButton href={experience.link} />
+        </div>
+      </div>
+    ))
+  }
+</div>

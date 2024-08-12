@@ -1,0 +1,125 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Expo from "./icons/Expo.astro";
+import ReactNative from "./icons/ReactNative.astro";
+import Java from "./icons/Java.astro";
+import Cpp from "./icons/Cpp.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Shell from "./icons/Shell.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import LinkButton from "./LinkButton.astro";
+import Link from "./icons/Link.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  EXPO: {
+    name: "Expo",
+    class: "bg-slate-500/50 text-white",
+    icon: Expo,
+  },
+  REACT_NATIVE: {
+    name: "React Native",
+    class: "bg-[#0b83a3] text-black",
+    icon: ReactNative,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#00216e] text-white",
+    icon: Java,
+  },
+  CPP: {
+    name: "C++",
+    class: "bg-[#4986d1] text-white",
+    icon: Cpp,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-500/80 text-black",
+    icon: JavaScript,
+  },
+  SHELL: {
+    name: "Shell",
+    class: "bg-black text-white",
+    icon: Shell,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#e34c26] text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#264de4] text-white",
+    icon: CSS,
+  },
+};
+
+const projectsList = [
+  {
+    title: "ClimaMania - Your weather app",
+    description:
+      "Aplicación móbil para consultar el tiempo. Desarrollada con React Native y Expo.",
+    github: "https://github.com/eur1p3des/climaMania",
+    image: "/projects/climaMania.png",
+    tags: [TAGS.EXPO, TAGS.REACT_NATIVE, TAGS.TAILWIND],
+  },
+  {
+    title: "Checkers - IDS Player",
+    description: "Jugador de Damas usando el algoritmo IDS con MinMax.",
+    github: "https://github.com/eur1p3des/Checkers",
+    image: "/projects/checkers.webp",
+    tags: [TAGS.JAVA],
+  },
+  {
+    title: "THC - Terrible Hackiemos Cracktool",
+    description:
+      "Cracktool para identificar vulnerabilidades y mejorar la seguridad de un sistema.",
+    github: "https://github.com/eur1p3des/THC",
+    image: "/projects/thc.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.SHELL, TAGS.HTML, TAGS.CSS],
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
+  {
+    projectsList.map((project) => (
+      <div class="flex flex-col gap-3 pb-3">
+        <div
+          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl bg-white"
+          style={`background-image: url('${project.image}');`}
+        />
+        <p class="text-base font-medium leading-normal">{project.title}</p>
+        <p class="text-sm font-light leading-tight">{project.description}</p>
+        <ul class="flex flex-row mb-2 gap-x-2">
+          {project.tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-0.5 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <LinkButton href={project.github}>
+          <GitHub class="size-4" />
+          Ver en GitHub
+        </LinkButton>
+      </div>
+    ))
+  }
+</div>
