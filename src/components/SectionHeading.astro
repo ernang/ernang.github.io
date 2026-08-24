@@ -1,0 +1,26 @@
+---
+import "@/styles/global.css";
+interface Props {
+  title: string;
+  color?: string;
+  id?: string;
+}
+
+const { title, color = "#6957ff", id } = Astro.props;
+---
+
+<div
+  id={id}
+  class="mx-1 mb-4.5 mt-[clamp(28px,4vw,44px)] flex items-center gap-3"
+>
+  <span class="size-2 rounded-full" style={`background:${color}`}></span>
+
+  <h2
+    class="m-0 text-[clamp(1.35rem,2.6vw,1.75rem)] font-semibold tracking-[-0.03em]"
+  >
+    {title}
+  </h2>
+
+  <span class="h-px flex-1 bg-[linear-gradient(95deg,#404040,transparent)]"
+  ></span>
+</div>

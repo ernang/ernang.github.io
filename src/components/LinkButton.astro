@@ -4,8 +4,8 @@ const { href } = Astro.props;
 
 <a
   href={href}
-  role="link"
-  class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-500 hover:border-red-950 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+  class="w-fit inline-flex items-center gap-2 py-2.5 px-5 rounded-full text-sm font-medium decoration-0 border-2 border-solid border-gray-700/25
+  bg-[#232323] cursor-pointer transition-[transform,border-color,opacity] duration-900 ease hover:-translate-y-0.5 hover:border-gray-400/55"
 >
   <slot />
 </a>

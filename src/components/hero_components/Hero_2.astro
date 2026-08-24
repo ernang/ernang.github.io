@@ -1,0 +1,45 @@
+---
+import "@/styles/global.css";
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = getTranslation(lang);
+
+const stats = t.stats;
+const statsTitle = t.titles.stats;
+---
+
+<section
+  class="flex min-h-75 flex-col rounded-3xl border border-[#303030] bg-[#1d1d1d] p-6 md:p-7 shadow transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gray-950"
+>
+  <span
+    class="inline-flex w-fit items-center gap-2 rounded-full border border-[#383838] px-4 py-2 text-sm"
+  >
+    <span
+      class="relative size-2 rounded-full bg-[#00c2a8] after:absolute after:inset-0 after:rounded-full after:shadow-[0_0_10px_#00c2a8] after:animate-pulse"
+    ></span>{statsTitle}
+  </span>
+  <div class="mt-6 flex flex-1 flex-col justify-between">
+    {
+      stats.map((stat, index) => (
+        <div>
+          {index > 0 && <div class="mb-3 border-t border-[#333333]" />}
+          <div class="flex items-center justify-between gap-4">
+            <p class="text-base">{stat.label}</p>
+            <p
+              class:list={[
+                "text-3xl font-semibold leading-none",
+                index === 0 && "text-[#7c5cff]",
+                index === 1 && "text-[#00c2a8]",
+                index === 2 && "text-[#ff7a45]",
+              ]}
+            >
+              {stat.value}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

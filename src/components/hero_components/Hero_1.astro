@@ -1,0 +1,66 @@
+---
+import "@/styles/global.css";
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
+import { Image } from "astro:assets";
+import Github from "@/components/icons/GitHub.astro";
+import profileImage from "@/assets/profile.webp";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = getTranslation(lang);
+
+const profile = t.profile;
+---
+
+<section
+  class="flex min-h-75 flex-col justify-between rounded-3xl border border-[#3a3a3a] bg-[#1d1d1d] p-6 shadow md:p-7 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gray-950"
+>
+  <div>
+    <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+      <div
+        class="relative grid size-22 shrink-0 place-items-center rounded-full bg-[linear-gradient(135deg,#6957ff,#00c2a8)] text-2xl font-bold text-white after:absolute after:-inset-1.5 after:z-0 after:text-bold after:rounded-full after:border after:border-dashed after:border-[#3a3a3a] after:animate-spin after:[animation-duration:22s]"
+      >
+        <Image
+          src={profileImage}
+          alt="Ernest Anguera"
+          width={88}
+          height={88}
+          loading="eager"
+          fetchpriority="high"
+          class="relative z-10 h-full w-full object-cover rounded-full"
+        />
+      </div>
+      <div>
+        <h1
+          class="text-3xl font-bold leading-none tracking-[-1px] text-[#f2f2f2] md:text-[42px]"
+        >
+          <span class="mr-2">👋</span>{profile.intro}&nbsp;
+          <span
+            class="bg-[linear-gradient(90deg,#9b5cff,#ff5c8a)] bg-clip-text text-transparent"
+            >{profile.name}</span>
+        </h1>
+        <p class="mt-2 text-base md:text-lg">
+          {profile.role} · {profile.location}
+        </p>
+      </div>
+    </div>
+    <p class="mt-6 max-w-175 text-base leading-[1.65] md:text-lg">
+      {profile.tagline}
+    </p>
+  </div>
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a
+      class="rounded-full bg-[linear-gradient(100deg,#ff5c8a,#9b5cff)] px-6 py-3 text-base font-semibold transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gray-900 hover:bg-[linear-gradient(90deg,#9b5cff,#ff5c8a)]"
+      href="#contacto">{profile.talk}</a
+    >
+    <a
+      class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold border border-[#30363d] text-white bg-[linear-gradient(90deg,#24292e,#3d444d)] transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:bg-[linear-gradient(90deg,#3d444d,#24292e)]"
+      href={profile.github}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <Github />
+      GitHub</a
+    >
+  </div>
+</section>

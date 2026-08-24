@@ -1,0 +1,22 @@
+---
+import "@/styles/global.css";
+
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = getTranslation(lang);
+
+const about_me = t.about;
+const about_me_title = t.titles.about_me;
+---
+
+<section
+  class="flex min-h-50 flex-col justify-between rounded-3xl border border-[#3a3a3a] bg-[#1d1d1d] p-6 shadow md:p-7 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gray-950"
+>
+  {
+    <p class="text-sm text-[#7e7c76] mb-3 uppercase">{about_me_title}</p>
+    <p class="text-justify text-[#b3b1ab]">{about_me.text1}</p>
+    <p class="mt-3.5 text-justify text-[#b3b1ab]">{about_me.text2}</p>
+  }
+</section>

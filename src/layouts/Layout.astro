@@ -1,38 +1,63 @@
 ---
-interface Props {
-  title: string;
-}
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
 
-const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 
-import Header from "../components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import "@fontsource-variable/onest";
+const t = getTranslation(lang);
+
+const meta = t.meta;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta name="description" content={meta.description} />
+    <title>Ernest Anguera</title>
   </head>
   <body>
-    <Header />
     <slot />
-    <Footer />
   </body>
 </html>
-<style is:global>
-  :root {
-    color-scheme: light dark;
+
+<style>
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+    color: #f5f4f1;
   }
+
   html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-    background-color: #212121;
     scroll-behavior: smooth;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(105, 87, 255, 0.15),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(0, 194, 168, 0.12),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 30%,
+        rgba(180, 90, 20, 0.08),
+        transparent 35%
+      ),
+      linear-gradient(135deg, #0d0d0d 0%, #151515 50%, #101010 100%);
   }
 </style>

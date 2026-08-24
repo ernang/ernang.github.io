@@ -1,0 +1,31 @@
+---
+import "@/styles/global.css";
+import TechPill from "@/components/about_components/TechPill.astro";
+
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = getTranslation(lang);
+
+const skills = t.skills;
+const skillsTitle = t.titles.skills;
+---
+
+<section
+  class="flex min-h-50 flex-col justify-between rounded-3xl border border-[#3a3a3a] bg-[#1d1d1d] p-6 shadow md:p-7 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gray-950"
+>
+    <p class="text-sm text-[#7e7c76] uppercase">{skillsTitle}</p>
+    {
+        skills.map ((skill) => (
+            <p class="text-sm text-[#7e7c76]"> {skill.group} </p>
+            <div class="my-1 flex flex-row flex-wrap gap-1">
+                {
+                skill.items.map((item) => (
+                    <TechPill skillId={item.name} color={item.color} text={item.text}/>
+                ))
+            }
+            </div>
+        ))
+    }
+</section>

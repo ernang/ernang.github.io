@@ -1,0 +1,86 @@
+---
+import "@/styles/global.css";
+import { languages, defaultLang } from "@/i18n/ui";
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = getTranslation(lang);
+const { hidden = true } = Astro.props;
+const cur_lang = getLangFromUrl(Astro.url);
+const currentLang = languages[cur_lang];
+const currentLangIso = cur_lang.toUpperCase();
+const languageTitle = t.titles.language;
+---
+
+<details
+  class={`relative text-left ${hidden ? "hidden " : ""}lg:inline-block`}
+  aria-label="Selector de idioma"
+>
+  <summary
+    class="group inline-flex cursor-pointer list-none items-center gap-2 rounded-full border border-white/10 bg-[#151515]/90 px-3 py-2 text-sm font-medium text-white shadow-[0_12px_38px_rgba(0,0,0,0.34)] outline-none transition-all duration-300 ease-out hover:border-[#6957ff]/70 hover:bg-[#19191d] hover:shadow-[0_16px_44px_rgba(105,87,255,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6957ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111]"
+    aria-label="Cambiar idioma"
+  >
+    <span
+      class="flex h-7 min-w-7 items-center justify-center rounded-full border border-white/12 bg-white/4 px-2 text-[10px] font-bold tracking-[0.14em] text-[#cfc9ff]"
+    >
+      {currentLangIso}
+    </span>
+
+    <span class="flex min-w-0 flex-col items-start leading-none">
+      <span
+        class="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+      >
+        {languageTitle}
+      </span>
+      <span class="mt-1 text-[13px] font-semibold tracking-[0.12em] text-white">
+        {currentLangIso} · {currentLang}
+      </span>
+    </span>
+  </summary>
+
+  <div
+    class="absolute left-0 z-20 mt-3 w-60 overflow-hidden rounded-3xl border border-white/8 bg-[#141414]/98 p-2 shadow-[0_30px_90px_rgba(0,0,0,0.58)] backdrop-blur-xl"
+  >
+    <div class="mb-2 flex items-center justify-between px-2 pt-1">
+      <span
+        class="text-[10px] font-bold uppercase tracking-[0.28em] text-slate-500"
+      >
+        {languageTitle}
+      </span>
+      <span
+        class="h-1.5 w-1.5 rounded-full bg-[#6957ff] shadow-[0_0_0_4px_rgba(105,87,255,0.12)]"
+      ></span>
+    </div>
+
+    <ul class="space-y-1">
+      {
+        Object.entries(languages).map(([lang, label]) => {
+          const href = lang === defaultLang ? "/" : `/${lang}/`;
+          const isActive = lang === cur_lang;
+          return (
+            <li>
+              <a
+                class={`flex items-center justify-between rounded-2xl px-3 py-2 text-sm font-medium transition-all duration-300 ${isActive ? "bg-[linear-gradient(135deg,rgba(105,87,255,0.34),rgba(168,85,247,0.24))] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15)]" : "text-slate-300 hover:bg-white/5 hover:text-white"}`}
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+              >
+                <span class="flex items-center gap-2">
+                  <span
+                    class={`flex h-4 w-4 items-center justify-center rounded-full border text-[9px] font-bold ${isActive ? "border-[#bca8ff] bg-[#6957ff] text-white" : "border-white/15 bg-transparent text-transparent"}`}
+                  >
+                    {isActive ? "✓" : ""}
+                  </span>
+                  <span>{label}</span>
+                </span>
+                <span class="uppercase text-[10px] tracking-[0.22em] text-slate-500">
+                  {lang}
+                </span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</details>

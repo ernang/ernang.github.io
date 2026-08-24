@@ -1,0 +1,27 @@
+---
+import "@/styles/global.css";
+import AboutMe from "@/components/about_components/AboutMe.astro";
+import Skills from "@/components/about_components/Skills.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+
+import { getLangFromUrl, getTranslation } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = getTranslation(lang);
+
+const about = t.titles.about;
+---
+
+<div
+  class="mx-auto w-full max-w-300 grid-cols-1 gap-4 px-4 md:px-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:px-0"
+>
+  <SectionHeading title={about} color="#ff7a45" id="about_me" />
+
+  <div
+    class="mx-auto grid w-full grid-cols-1 gap-4 px-4 md:px-6 lg:grid-cols-2 lg:px-0"
+  >
+    <AboutMe />
+    <Skills />
+  </div>
+</div>
