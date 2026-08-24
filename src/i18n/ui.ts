@@ -63,7 +63,7 @@ export const ui = {
         description:
           "Aplicació mòbil per consultar el temps. Desenvolupada amb React Native i Expo.",
         github: "https://github.com/eur1p3des/climaMania",
-        image: "/public/images/projects/climamania.png",
+        image: "/images/projects/climamania.png",
         tags: [
           {
             value: "TAGS.EXPO",
@@ -80,7 +80,7 @@ export const ui = {
         title: "Checkers - Jugador IDS",
         description: "Jugador de dames utilitzant l'algorisme IDS amb MinMax.",
         github: "https://github.com/eur1p3des/Checkers",
-        image: "/public/images/projects/checkers.webp",
+        image: "/images/projects/checkers.webp",
         tags: [
           {
             value: "TAGS.JAVA",
@@ -92,7 +92,7 @@ export const ui = {
         description:
           "Cracktool per identificar vulnerabilitats i millorar la seguretat d'un sistema.",
         github: "https://github.com/eur1p3des/THC",
-        image: "/public/images/projects/thc.webp",
+        image: "/images/projects/thc.webp",
         tags: [
           {
             value: "TAGS.JAVASCRIPT",
@@ -298,7 +298,7 @@ export const ui = {
         description:
           "Aplicación móbil para consultar el tiempo. Desarrollada con React Native y Expo.",
         github: "https://github.com/eur1p3des/climaMania",
-        image: "/public/images/projects/climamania.png",
+        image: "/images/projects/climamania.png",
         tags: [
           {
             value: "TAGS.EXPO",
@@ -315,7 +315,7 @@ export const ui = {
         title: "Checkers - Jugador IDS",
         description: "Jugador de Damas usando el algoritmo IDS con MinMax.",
         github: "https://github.com/eur1p3des/Checkers",
-        image: "/public/images/projects/checkers.webp",
+        image: "/images/projects/checkers.webp",
         tags: [
           {
             value: "TAGS.JAVA",
@@ -327,7 +327,7 @@ export const ui = {
         description:
           "Cracktool para identificar vulnerabilidades y mejorar la seguridad de un sistema.",
         github: "https://github.com/eur1p3des/THC",
-        image: "/public/images/projects/thc.webp",
+        image: "/images/projects/thc.webp",
         tags: [
           {
             value: "TAGS.JAVASCRIPT",
@@ -532,7 +532,7 @@ export const ui = {
         description:
           "Mobile application to check the weather. Developed with React Native and Expo.",
         github: "https://github.com/eur1p3des/climaMania",
-        image: "/public/images/projects/climaMania.png",
+        image: "/images/projects/climaMania.png",
         tags: [
           {
             value: "TAGS.EXPO",
@@ -549,7 +549,7 @@ export const ui = {
         title: "Checkers - IDS Player",
         description: "Automatic Checkers player using IDS and MinMax pruning.",
         github: "https://github.com/eur1p3des/Checkers",
-        image: "/public/images/projects/checkers.webp",
+        image: "/images/projects/checkers.webp",
         tags: [
           {
             value: "TAGS.JAVA",
@@ -561,7 +561,7 @@ export const ui = {
         description:
           "Cracktool to identify vulnerabilities and improve the security of a system.",
         github: "https://github.com/eur1p3des/THC",
-        image: "/public/images/projects/thc.webp",
+        image: "/images/projects/thc.webp",
         tags: [
           {
             value: "TAGS.JAVASCRIPT",
