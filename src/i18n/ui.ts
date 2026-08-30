@@ -532,7 +532,7 @@ export const ui = {
         description:
           "Mobile application to check the weather. Developed with React Native and Expo.",
         github: "https://github.com/eur1p3des/climaMania",
-        image: "/images/projects/climaMania.png",
+        image: "/images/projects/climamania.png",
         tags: [
           {
             value: "TAGS.EXPO",
